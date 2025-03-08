@@ -1,0 +1,96 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yemek Tarifi Öner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #F8F6F4;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #5C5470;
+            font-weight: 700;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #5C5470;
+        }
+
+        .btn-primary {
+            background: #A084CA;
+            border: none;
+            font-weight: 600;
+            padding: 10px 15px;
+            border-radius: 10px;
+        }
+
+            .btn-primary:hover {
+                background: #8466A1;
+            }
+
+        .alert {
+            margin-top: 15px;
+        }
+
+        .result-box {
+            background: #E8DFF5;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            color: #5C5470;
+            font-size: 16px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>🍽 AI Tarif Önerici</h2>
+        <p class="text-center">Elindeki malzemeleri gir, yapabileceğin yemekleri öğren!</p>
+
+        <form method="post">
+            <label for="ingredients" class="form-label">Malzemelerinizi Giriniz (virgülle ayırın):</label>
+            <input type="text" id="ingredients" name="ingredients" class="form-control" placeholder="Örn: Domates, Peynir, Makarna" required />
+            <br />
+            <button type="submit" class="btn btn-primary w-100">🥣 Tarif Öner</button>
+        </form>
+
+        <div class="result-box">
+            <h4>🥘 AI Önerisi:</h4>
+            <p>@ViewBag.recipe</p>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+
+
+
+</html>

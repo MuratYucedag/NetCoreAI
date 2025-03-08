@@ -1,0 +1,25 @@
+﻿@model NetCoreAI.Project2_ApiConsumeUI.Dtos.GetByIdCustomerDto
+
+@{
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+
+<form method="post">
+    <div class="container">
+        <br /><br />
+        <input type="hidden" asp-for="customerId" />
+        <label>Müşteri Adı</label>
+        <input type="text" asp-for="customerName" class="form-control" />
+        <br />
+        <label>Müşteri Soyadı</label>
+        <input type="text" asp-for="customerSurname" class="form-control" />
+        <br />
+        <label>Müşteri Bakiye</label>
+        <input type="text" asp-for="customerBalance" class="form-control" />
+        <br />
+        <button class="btn btn-dark">Müşteriyi Güncelle</button>
+    </div>
+</form>
